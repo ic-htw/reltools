@@ -40,7 +40,6 @@ def parse_sql_string(sql_content: str) -> Dict[str, Any]:
     tables = []
 
     for stmt in statements:
-        print(stmt.get_type())
         if stmt.get_type() == 'CREATE':
             table_def = _parse_create_table(stmt)
             if table_def:
